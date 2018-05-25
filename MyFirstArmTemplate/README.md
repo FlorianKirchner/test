@@ -1,6 +1,7 @@
 # MyFirstArmTemplate deployment
 
 Okay Engmann hatte recht, ARM Templates sind nicht nur was für Programmierer.
+
 Das ist super easy mit Visual Studio!!
 
 This template deploys the following resources:
