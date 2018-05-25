@@ -1,10 +1,10 @@
 # MyFirstArmTemplate deployment
 
+Engmann hatte recht, das ist super easy!!!
+
 This template deploys the following resources:
 
 <ul><li>storage account;</li><li>vnet, public ip;</li><li>web server vm;</li></ul>
-
-The template will deploy Web server VM, DSC in the deployment.
 
 Click the button below to deploy
 
