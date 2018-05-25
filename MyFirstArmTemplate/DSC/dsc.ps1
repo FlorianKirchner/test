@@ -49,39 +49,5 @@ Configuration Main
             State = "Running"
             DependsOn = "[Package]InstallWebDeploy"
         }
-        Script DownloadWebDeployPackage
-        {
-            TestScript = {
-                Test-Path -Path "C:\TR23WebApp.zip"
-            }
-            SetScript = {
-                $source = "https://github.com/GSIAzureCOE/Networking/raw/master/Demo-TrafficManager/TM-Demo-Solution/TM-Demo/App/TM-Demo-App.zip"
-                $dest = "C:\TR23WebApp.zip"
-                Invoke-WebRequest $source -OutFile $dest
-            }
-            GetScript = {@{Result = "DownloadWebDeployPackage"}}
-            DependsOn = "[Service]StartWebDeploy"
-        }
-        Script InstallWebDeployPackage
-        {
-            TestScript = {
-            Test-Path -Path "HKLM:\SOFTWARE\TR23\WebDeployPkgInstalled"
-        }
-        SetScript = {
-            $appName = "IIS Web Application Name"
-            $siteName = "Default Web Site"
-            $msDeployPath = "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe"
-            & $msDeployPath "-verb:sync", "-source:package=C:\TR23WebApp.zip", "-dest:auto,ComputerName=""localhost""", "-setParam:name=""$appName"",value=""$siteName"""
-            if ($LASTEXITCODE -eq 0)
-            {
-                               
-               New-Item -Path "HKLM:\SOFTWARE\TR23\WebDeployPkgInstalled" -Force
-            }
-        }
-        GetScript = {@{Result = "InstallWebDeployPackage"}}
-
-        DependsOn = "[Script]DownloadWebDeployPackage"
-
-        }
     }
 }
