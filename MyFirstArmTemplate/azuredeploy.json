@@ -43,12 +43,14 @@
     },
     "_artifactsLocation": {
       "type": "string",
+      "defaultValue": "https://raw.githubusercontent.com/FlorianKirchner/test/master/MyFirstArmTemplate",
       "metadata": {
         "description": "Auto-generated container in staging storage account to receive post-build staging folder upload"
       }
     },
     "_artifactsLocationSasToken": {
       "type": "securestring",
+      "defaultValue": "",
       "metadata": {
         "description": "Auto-generated token to access _artifactsLocation"
       }
