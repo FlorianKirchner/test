@@ -38,12 +38,13 @@
         "2008-R2-SP1",
         "2012-Datacenter",
         "2012-R2-Datacenter",
-        "2016-Datacenter"
+        "2016-Datacenter",
+        "Windows-Server-Technical-Preview"
       ]
     },
     "_artifactsLocation": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/FlorianKirchner/test/master/MyFirstArmTemplate",
+      "defaultValue": "http://raw.githubusercontent.com/FlorianKirchner/test/master/MyFirstArmTemplate",
       "metadata": {
         "description": "Auto-generated container in staging storage account to receive post-build staging folder upload"
       }
