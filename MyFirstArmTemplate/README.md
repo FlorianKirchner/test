@@ -1,6 +1,7 @@
 # MyFirstArmTemplate deployment
 
-Engmann hatte recht, das ist super easy!!!
+Engmann hatte recht, man sollte sich ARM Templates anschauen.
+Das ist super easy mit Visual Studio!!
 
 This template deploys the following resources:
 
